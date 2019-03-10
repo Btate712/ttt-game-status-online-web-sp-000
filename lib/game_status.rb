@@ -27,7 +27,7 @@ end
 
 def full?(board)
   has_empty = false
-  board.find do |character| 
+  board.find do |character|
     if character == " " || character == "" || character == nil
       has_empty = true
     end
