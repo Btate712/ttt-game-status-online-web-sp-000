@@ -4,7 +4,7 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-WIN_COMBINATIONS =
+WIN_COMBINATIONS = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -13,10 +13,12 @@ WIN_COMBINATIONS =
   [2, 5, 8],
   [0, 4, 8],
   [2, 4, 6]
+]
 
 def won?(board)
   WIN_COMBINATIONS.each do |combination|
-    if (combination[0] == "X" || combination[0] == "O") && (combination[0] == combination[1] && combination[1] == combination[2])
+    if (combination[0] == "X" || combination[0] == "O") && 
+      (combination[0] == combination[1] && combination[1] == combination[2])
       return combination
     end
   end
