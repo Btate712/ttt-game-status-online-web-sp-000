@@ -24,3 +24,19 @@ def won?(board)
   end
   return false
 end
+
+def full?(board)
+  has_empty = false
+  board.find do |character| 
+    if character == " " || character == "" || character == nil
+      has_empty = true
+    end
+  end
+  if has_empty
+    return false
+  else
+    return true
+  end
+end
+
+    
